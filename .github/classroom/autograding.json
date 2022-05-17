@@ -3,7 +3,7 @@
     {
       "name": "Test 1",
       "setup": "make",
-      "run": "./boolcalc tests/funs01.in output.txt && cmp -s output.txt tests/funs01.out",
+      "run": "./boolcalc -isfull tests/funs01.in output.txt && cmp -s output.txt tests/funs01.out",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -13,7 +13,7 @@
     {
       "name": "Test 2",
       "setup": "",
-      "run": "./boolcalc tests/funs02.in output.txt && cmp -s output.txt tests/funs02.out",
+      "run": "./boolcalc -isfull tests/funs02.in output.txt && cmp -s output.txt tests/funs02.out",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -23,7 +23,7 @@
     {
       "name": "Test 3",
       "setup": "",
-      "run": "./boolcalc tests/funs03.in output.txt && cmp -s output.txt tests/funs03.out",
+      "run": "./boolcalc -isfull tests/funs03.in output.txt && cmp -s output.txt tests/funs03.out",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -33,7 +33,7 @@
     {
       "name": "Test 4",
       "setup": "",
-      "run": "./boolcalc tests/funs04.in output.txt && cmp -s output.txt tests/funs04.out",
+      "run": "./boolcalc -isfull tests/funs04.in output.txt && cmp -s output.txt tests/funs04.out",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -43,7 +43,7 @@
     {
       "name": "Test 5",
       "setup": "",
-      "run": "./boolcalc tests/funs05.in output.txt && cmp -s output.txt tests/funs05.out",
+      "run": "./boolcalc -isfull tests/funs05.in output.txt && cmp -s output.txt tests/funs05.out",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -53,7 +53,7 @@
     {
       "name": "Test 6",
       "setup": "",
-      "run": "./boolcalc tests/funs06.in output.txt && cmp -s output.txt tests/funs06.out",
+      "run": "./boolcalc -isfull tests/funs06.in output.txt && cmp -s output.txt tests/funs06.out",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -63,7 +63,7 @@
     {
       "name": "Test 7",
       "setup": "",
-      "run": "./boolcalc tests/funs07.in output.txt && cmp -s output.txt tests/funs07.out",
+      "run": "./boolcalc -isfull tests/funs07.in output.txt && cmp -s output.txt tests/funs07.out",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -73,7 +73,7 @@
     {
       "name": "Test 8",
       "setup": "",
-      "run": "./boolcalc tests/funs08.in output.txt && cmp -s output.txt tests/funs08.out",
+      "run": "./boolcalc -isfull tests/funs08.in output.txt && cmp -s output.txt tests/funs08.out",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -83,7 +83,7 @@
     {
       "name": "Test 9",
       "setup": "",
-      "run": "./boolcalc tests/funs09.in output.txt && cmp -s output.txt tests/funs09.out",
+      "run": "./boolcalc -isfull tests/funs09.in output.txt && cmp -s output.txt tests/funs09.out",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -93,7 +93,7 @@
     {
       "name": "Test 10",
       "setup": "",
-      "run": "./boolcalc tests/funs10.in output.txt && cmp -s output.txt tests/funs10.out",
+      "run": "./boolcalc -isfull tests/funs10.in output.txt && cmp -s output.txt tests/funs10.out",
       "input": "",
       "output": "",
       "comparison": "included",
