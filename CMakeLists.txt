@@ -11,4 +11,14 @@ add_executable(
         boolcalc.cpp
         boolexpr.h
         boolexpr.cpp
-)
+        avltree.h
+        errors.h
+        formulaenode.h
+        formulaenode.cpp
+        lib/avl_map.h
+        lib/cstring.h
+        lib/cstring.cpp
+        lib/functional.h
+        lib/utility.h
+        lib/vector.h
+        helpers.h)
