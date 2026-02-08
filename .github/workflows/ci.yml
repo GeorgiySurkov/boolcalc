@@ -13,26 +13,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build
-        run: make clean && make
-
-      - name: Run tests
-        run: |
-          passed=0
-          failed=0
-          for i in $(seq -w 1 10); do
-            printf "Test %s: " "$i"
-            if ./boolcalc -isfull tests/funs${i}.in output.txt && cmp -s output.txt tests/funs${i}.out; then
-              echo "PASS"
-              passed=$((passed + 1))
-            else
-              echo "FAIL"
-              echo "::error::Test $i failed"
-              failed=$((failed + 1))
-            fi
-          done
-          echo ""
-          echo "Results: $passed passed, $failed failed out of 10 tests"
-          if [ "$failed" -gt 0 ]; then
-            exit 1
-          fi
+      - name: Build and run tests
+        run: make test
