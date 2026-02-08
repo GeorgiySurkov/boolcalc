@@ -1,4 +1,5 @@
 #include <iomanip>
+#include <cstdint>
 #include "boolexpr.h"
 #include "helpers.h"
 
@@ -502,28 +503,28 @@ BooleanExpression BooleanExpression::zhegalkin() {
 }
 
 unsigned char BooleanExpression::getClassMask() {
-    unsigned char classMask = 0b11111; // represents 5 classes:
+    uint8_t classMask = 0b11111; // represents 5 classes:
     // monotonic, falsity-preserving, truth-preserving, affine, self-dual
     calcTruthTable();
     calcJeg();
     if (truthTable[0]) {
-        classMask = classMask & (unsigned char) 0b11111101; // check if preserves falsity
+        classMask = classMask & (uint8_t) 0b11111101; // check if preserves falsity
     }
     if (!truthTable[truthTableSize - 1]) {
-        classMask = classMask & (unsigned char) (0b11111011); // check if preserves truth
+        classMask = classMask & (uint8_t) (0b11111011); // check if preserves truth
     }
     for (int i = 1; i < truthTableSize; ++i) {
         if (truthTable[i] < truthTable[i - 1])
-            classMask = classMask & (unsigned char) (0b11111110); // check if is monotonic
+            classMask = classMask & (uint8_t) (0b11111110); // check if is monotonic
     }
     for (int i = 0; i < truthTableSize / 2; ++i) {
         if (truthTable[i] != truthTable[truthTableSize - i - 1]) {
-            classMask = classMask & (unsigned char) (0b11101111); // check if is self-dual
+            classMask = classMask & (uint8_t) (0b11101111); // check if is self-dual
         }
     }
     for (int i = 3; i < truthTableSize; ++i) {
         if (((i & (i - 1)) != 0) && zhegalkinCoefficients[i]) {
-            classMask = classMask & (unsigned char) (0b11110111); // check if is affine
+            classMask = classMask & (uint8_t) (0b11110111); // check if is affine
         }
     }
     return classMask;
