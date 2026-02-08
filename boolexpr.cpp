@@ -1,4 +1,5 @@
 #include <iomanip>
+#include <cstdint>
 #include "boolexpr.h"
 #include "helpers.h"
 
